@@ -1,0 +1,68 @@
+[
+  {
+    "date": "2026-11-02",
+    "beginLesson": "08:30",
+    "endLesson": "10:00",
+    "discipline": "Логика роботов",
+    "kindOfWork": "Практическое занятие",
+    "lecturer": "Иванов И.И.",
+    "auditorium": "А-12",
+    "subgroup": "1",
+    "lessonNumberStart": 1
+  },
+  {
+    "date": "2026-11-02",
+    "beginLesson": "08:30",
+    "endLesson": "10:00",
+    "discipline": "Логика роботов",
+    "kindOfWork": "Практическое занятие",
+    "lecturer": "Иванов И.И.",
+    "auditorium": "А-12",
+    "subgroup": "2",
+    "lessonNumberStart": 1
+  },
+  {
+    "date": "2026-11-03",
+    "beginLesson": "08:30",
+    "endLesson": "10:00",
+    "discipline": "История механизмов",
+    "kindOfWork": "Практическое занятие",
+    "lecturer": "Иванов И.И.",
+    "auditorium": "А-12",
+    "subgroup": "1",
+    "lessonNumberStart": 1
+  },
+  {
+    "date": "2026-11-03",
+    "beginLesson": "08:30",
+    "endLesson": "10:00",
+    "discipline": "История механизмов",
+    "kindOfWork": "Практическое занятие",
+    "lecturer": "Иванов И.И.",
+    "auditorium": "А-12",
+    "subgroup": "2",
+    "lessonNumberStart": 1
+  },
+  {
+    "date": "2026-11-04",
+    "beginLesson": "08:30",
+    "endLesson": "10:00",
+    "discipline": "Экология орбит",
+    "kindOfWork": "Практическое занятие",
+    "lecturer": "Иванов И.И.",
+    "auditorium": "А-12",
+    "subgroup": "1",
+    "lessonNumberStart": 1
+  },
+  {
+    "date": "2026-11-04",
+    "beginLesson": "08:30",
+    "endLesson": "10:00",
+    "discipline": "Экология орбит",
+    "kindOfWork": "Практическое занятие",
+    "lecturer": "Иванов И.И.",
+    "auditorium": "А-12",
+    "subgroup": "2",
+    "lessonNumberStart": 1
+  }
+]

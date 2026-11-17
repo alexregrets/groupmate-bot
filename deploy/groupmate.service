@@ -1,0 +1,25 @@
+[Unit]
+Description=Groupmate Telegram study-group assistant
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=groupmate
+Group=groupmate
+WorkingDirectory=/opt/groupmate-bot
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=PYTHONUNBUFFERED=1
+Environment=STATE_DIR=/var/lib/groupmate
+StateDirectory=groupmate
+ExecStart=/opt/groupmate-bot/venv/bin/python /opt/groupmate-bot/main.py
+Restart=on-failure
+RestartSec=10
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

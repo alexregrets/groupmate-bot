@@ -1,0 +1,6 @@
+aiogram>=3.31,<4
+aiohttp>=3.9,<4
+imap-tools>=1.5,<2
+python-dotenv>=1.0,<2
+tzdata
+pytest>=8,<10

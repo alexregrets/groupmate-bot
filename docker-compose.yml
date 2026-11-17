@@ -1,0 +1,21 @@
+services:
+  groupmate:
+    build: .
+    restart: unless-stopped
+    init: true
+    env_file: .env
+    environment:
+      STATE_DIR: /app/state
+      SCHEDULE_FILE: /app/schedule.json
+    volumes:
+      - groupmate-state:/app/state
+      - ./schedule.json:/app/schedule.json:ro
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+volumes:
+  groupmate-state:

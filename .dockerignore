@@ -1,0 +1,12 @@
+.env
+state/
+*.db
+*.db-*
+venv/
+__pycache__/
+.pytest_cache/
+.git/
+.task/
+_source/
+tests/
+schedule.json
