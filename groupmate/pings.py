@@ -6,6 +6,7 @@ from datetime import timedelta
 from . import clock, homework, schedule, storage, study, usage
 
 logger = logging.getLogger(__name__)
+PING_HW_MAX = 5
 
 
 async def build_ping(provider, chat_id, day, is_morning):
@@ -16,7 +17,7 @@ async def build_ping(provider, chat_id, day, is_morning):
     when = "Сегодня" if is_morning else "Завтра"
     text = when + "\n" + schedule.format_day(day, lessons)
     if tasks:
-        text += "\n\n" + homework.format_items(tasks)
+        text += "\n\n" + homework.format_items(tasks, limit=PING_HW_MAX)
     return text
 
 

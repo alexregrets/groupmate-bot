@@ -89,3 +89,11 @@ def test_radar_routes_extra_mailbox_chat_to_its_topic():
     sender.send_message.assert_awaited_once()
     assert sender.send_message.call_args.args[0] == -300
     assert sender.send_message.call_args.kwargs["message_thread_id"] == 7
+
+
+def test_format_items_limit_points_to_hw():
+    items = [{"id": i, "due_date": "2026-11-18", "subject": "Предмет", "text": f"Задание {i}"} for i in range(8)]
+    text = homework.format_items(items, limit=5)
+    assert text.count("· Предмет: Задание") == 5
+    assert text.endswith("…и ещё 3, всё списком: /hw")
+    assert homework.format_items(items).count("· Предмет: Задание") == 8

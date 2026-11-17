@@ -47,11 +47,15 @@ def mark_done(chat_id, homework_id, user_id):
     return True
 
 
-def format_items(items):
+def format_items(items, limit=None):
+    """limit режет длинный список (пинги): остаток одной строкой со ссылкой на /hw."""
     if not items:
         return "Домашка не записана. Добавить: /hw завтра прочитать главу 3"
     lines = ["<b>Домашка</b>"]
-    for item in items:
+    shown = items if limit is None else items[:limit]
+    for item in shown:
         title = f"{item['subject']}: " if item["subject"] else ""
         lines.append(f"#{item['id']} {item['due_date']} · {escape(title + item['text'])}")
+    if len(items) > len(shown):
+        lines.append(f"…и ещё {len(items) - len(shown)}, всё списком: /hw")
     return "\n".join(lines)
